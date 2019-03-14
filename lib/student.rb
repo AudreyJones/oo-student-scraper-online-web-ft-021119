@@ -24,7 +24,7 @@ class Student
       # new_student[key] = value
     end
 
-                                                
+
     new_student = Student.new(attributes_hash)
     attributes_hash
   end
