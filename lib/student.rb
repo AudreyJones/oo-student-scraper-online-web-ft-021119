@@ -24,7 +24,6 @@ class Student
       binding.pry
       # new_student.key = value
       # new_student[key] = value
-
     end
 
                                                 #     {:twitter=>"someone@twitter.com",
@@ -36,7 +35,7 @@ class Student
                                                 #  :bio=>
                                                 #   "I was in southern California for college (sun and In-n-Out!), rural Oregon for high school (lived in a town with 1500 people and 3000+ cows), and Tokyo for elementary
                                                 # /middle school."}
-# binding.pry
+    attributes_hash
   end
 
   def self.all
