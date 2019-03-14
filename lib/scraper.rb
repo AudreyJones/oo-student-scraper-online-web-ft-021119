@@ -30,7 +30,8 @@ class Scraper
     # student_info[:name] = doc.css("h1.profile-name").text
     # student_info[:location] = doc.css("h2.profile-location").text
     # student_info[:profile_url] = profile_url
-
+    thing = doc.css("div.social-icon-container a")
+    binding.pry
 #Iterate over Social Icons to get links:
     doc.css("div.social-icon-container").map do |icon|
       student_info[:twitter] = icon.css("a")[0].attr("href")
