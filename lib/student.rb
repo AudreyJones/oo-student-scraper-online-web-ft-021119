@@ -33,6 +33,7 @@ class Student
                                                 #  :bio=>
                                                 #   "I was in southern California for college (sun and In-n-Out!), rural Oregon for high school (lived in a town with 1500 people and 3000+ cows), and Tokyo for elementary
                                                 # /middle school."}
+    new_student = Student.new(attributes_hash)
     attributes_hash
   end
 
