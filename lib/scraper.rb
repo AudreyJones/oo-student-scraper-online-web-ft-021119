@@ -27,8 +27,9 @@ class Scraper
     doc = Nokogiri::HTML(html)
     student_info = {}       #(:name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url)
 
-      student_info[:name] = doc.css("h1.profile-name").text
-      student_info[:location] = doc.css("h2.profile-location").text
+    # student_info[:name] = doc.css("h1.profile-name").text
+    # student_info[:location] = doc.css("h2.profile-location").text
+    # student_info[:profile_url] = profile_url
 
 #Iterate over Social Icons to get links:
     doc.css("div.social-icon-container").map do |icon|
@@ -36,15 +37,13 @@ class Scraper
       student_info[:linkedin] = icon.css("a")[1].attr("href")
       student_info[:github] = icon.css("a")[2].attr("href")
       student_info[:blog] = icon.css("a")[3].attr("href")
-      # binding.pry
+      binding.pry
     end
 
     student_info[:profile_quote] = doc.css("div.profile-quote").text #"\"Reduce to a previously solved problem\""
     student_info[:bio] = doc.css("div.bio-content.content-holder p").text
-    student_info[:profile_url] = profile_url
-# binding.pry
-    student_info
 
+    student_info
   end
 
 end
