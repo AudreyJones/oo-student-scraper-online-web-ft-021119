@@ -35,7 +35,7 @@ class Scraper
 #Iterate over Social Icons to get links:
     thing.map do |link|
       binding.pry
-      url = link.attributes.first[1]
+      url = link.attributes.first[1].value
       if
         student_info[:twitter] = icon.css("a")[0].attr("href")
       student_info[:linkedin] = icon.css("a")[1].attr("href")
