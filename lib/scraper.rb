@@ -37,7 +37,7 @@ class Scraper
       student_info[:linkedin] = icon.css("a")[1].attr("href")
       student_info[:github] = icon.css("a")[2].attr("href")
       student_info[:blog] = icon.css("a")[3].attr("href")
-      binding.pry
+      # binding.pry
     end
 
     student_info[:profile_quote] = doc.css("div.profile-quote").text #"\"Reduce to a previously solved problem\""
