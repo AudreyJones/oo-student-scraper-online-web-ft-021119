@@ -26,7 +26,7 @@ class Student
     end
 
 
-    
+
     attributes_hash
   end
 
