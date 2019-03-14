@@ -7,28 +7,49 @@ class Scraper
   def self.scrape_index_page(index_url)
     html = open(index_url)
     doc = Nokogiri::HTML(html)
-    students = {}
+    students = []
+    # Name: student.css("a").css("h4").text
+    # Location: student.css("a p").text
+    #Profile: student.css("a").attr("href").value
 
-# Student Name: doc.css("h4").first.text
-# Location: doc.css("p").first.text
-#Link to Page: doc.css("a")[1].attr("href")
-# Collection: doc.css(".roster-cards-container")
+    doc.css(".roster-cards-container").map do |student_cards|
+      student_cards.css(".student-card").each {|student|
 
-# Expected return: an array of hashes in which each hash represents one student
-# Iterate through the students:
-    doc.css(".roster-cards-container").each do |student|
-          # student = Student.new
-          students = {
-            :name => doc.css("h4").text
-           :location => doc.css("p").first.text
-           :profile_url => doc.css("a")[1].attr("href")
-          }
-
-        end
-    # {:name => doc.css("h4").text, :location => doc.css("p").text, :profile_url => doc.css("a")[1].attr("href")}
+        students << {
+          :name => student.css("a").css("h4").text,
+         :location => student.css("a p").text,
+         :profile_url => student.css("a").attr("href").value
+        }
+      }
+    end
+    students
   end
 
   def self.scrape_profile_page(profile_url)
+    html = open(profile_url)
+    doc = Nokogiri::HTML(html)
+    student_info = {}       #(:name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url)
+
+      student_info[:name] = doc.css("h1.profile-name").text
+      student_info[:location] = doc.css("h2.profile-location").text
+
+#Iterate over Social Icons to get links:
+    doc.css("div.social-icon-container").map do |icon|
+      student_info[:twitter] = icon.css("a").attr("href").value
+      student_info[:linkedin] = icon.css("a")[1].attr("href")
+      student_info[:github] = icon.css("a")[2].attr("href")
+      student_info[:blog] = icon.css("a")[3].attr("href")
+    end
+
+    student_info[:quote] = doc.css("div.profile-quote").text
+    student_info[:bio] = doc.css("div.bio-content.content-holder p").text
+    # student_info[:profile_url] = ????
+# binding.pry
+    student_info
+
+
+
+
 
   end
 
