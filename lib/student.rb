@@ -5,7 +5,8 @@ class Student
   @@all = []
 
   def initialize(student_hash) #{:name=>"Alex Patriquin", :location=>"New York, NY"}
-    # binding.pry
+    @name = :name
+    @location = :location
   end
 
   def self.create_from_collection(students_array)
