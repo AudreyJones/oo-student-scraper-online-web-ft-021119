@@ -21,7 +21,7 @@ class Student
     attributes_hash.each do |key,value|
       # attributes_hash[key]= value
       # binding.pry
-      self.key = value
+      self[key] = value
       # new_student[key] = value
     end
     attributes_hash
