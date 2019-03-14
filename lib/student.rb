@@ -5,7 +5,7 @@ class Student
   @@all = []
 
   def initialize(student_hash) #{:name=>"Alex Patriquin", :location=>"New York, NY"}
-    @name = :name
+    @name = student_hash[name]
     @location = :location
   end
 
