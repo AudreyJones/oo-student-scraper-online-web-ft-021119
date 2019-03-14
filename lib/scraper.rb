@@ -30,14 +30,22 @@ class Scraper
     # student_info[:name] = doc.css("h1.profile-name").text
     # student_info[:location] = doc.css("h2.profile-location").text
     # student_info[:profile_url] = profile_url
+    thing = doc.css("div.social-icon-container a")
 
 #Iterate over Social Icons to get links:
-    doc.css("div.social-icon-container").map do |icon|
-      student_info[:twitter] = icon.css("a")[0].attr("href")
-      student_info[:linkedin] = icon.css("a")[1].attr("href")
-      student_info[:github] = icon.css("a")[2].attr("href")
-      student_info[:blog] = icon.css("a")[3].attr("href")
-      binding.pry
+    thing.map do |link|
+      # binding.pry
+      url = link.attributes.first[1].value
+      if url.include?("twitter")
+        student_info[:twitter] = url
+      elsif url.include?("linkedin")
+        student_info[:linkedin] = url
+      elsif url.include?("github")
+        student_info[:github] = url
+      else 
+        student_info[:blog] = url
+      end
+
     end
 
     student_info[:profile_quote] = doc.css("div.profile-quote").text #"\"Reduce to a previously solved problem\""
