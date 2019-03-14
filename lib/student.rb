@@ -20,6 +20,7 @@ class Student
     new_student = Student.new(attributes_hash)
 
     attributes_hash.each do |key,value|
+      attributes_hash[key]= value
       binding.pry
       # new_student.key = value
       # new_student[key] = value
