@@ -24,7 +24,7 @@ class Student
       new_student[key] = value
 
     end
-      
+
                                                 #     {:twitter=>"someone@twitter.com",
                                                 #  :linkedin=>"someone@linkedin.com",
                                                 #  :github=>"someone@github.com",
