@@ -12,9 +12,9 @@ class Student
 
   def self.create_from_collection(students_array)
     students_array.each do |name, location|
-
+binding.pry
     end
-    binding.pry
+    
                                                           #[{:name=>"Alex Patriquin", :location=>"New York, NY"},
                                                            # {:name=>"Bacon McRib", :location=>"Kansas City, MO"},
                                                            # {:name=>"Alisha McWilliams", :location=>"San Francisco, CA"},
