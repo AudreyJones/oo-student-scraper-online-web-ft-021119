@@ -18,11 +18,12 @@ class Student
 
   def add_student_attributes(attributes_hash)
     new_student = Student.new(attributes_hash)
-    binding.pry
+  
     # attributes_hash.each do |key,value|
     #   [key] = value
     #
     # end
+      binding.pry
                                                 #     {:twitter=>"someone@twitter.com",
                                                 #  :linkedin=>"someone@linkedin.com",
                                                 #  :github=>"someone@github.com",
