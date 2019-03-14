@@ -46,8 +46,6 @@ class Scraper
         student_info[:blog] = url
       end
 
-
-
       # student_info[:twitter] = icon.css("a")[0].attr("href")
       # student_info[:linkedin] = icon.css("a")[1].attr("href")
       # student_info[:github] = icon.css("a")[2].attr("href")
