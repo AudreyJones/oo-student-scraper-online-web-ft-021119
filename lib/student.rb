@@ -20,7 +20,7 @@ class Student
     Student.new(attributes_hash)
     # attributes_hash.each do |key,value|
     #   [key] = value
-    # 
+    #
     # end
                                                 #     {:twitter=>"someone@twitter.com",
                                                 #  :linkedin=>"someone@linkedin.com",
