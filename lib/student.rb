@@ -14,15 +14,6 @@ class Student
     students_array.each do |student|
     new_student = Student.new(student)
     end
-
-                                                          #[{:name=>"Alex Patriquin", :location=>"New York, NY"},
-                                                           # {:name=>"Bacon McRib", :location=>"Kansas City, MO"},
-                                                           # {:name=>"Alisha McWilliams", :location=>"San Francisco, CA"},
-                                                           # {:name=>"Daniel Fenjves", :location=>"Austin, TX"},
-                                                           # {:name=>"Arielle Sullivan", :location=>"Chicago, IL"},
-                                                           # {:name=>"Sushanth Bhaskarab", :location=>"Portland, OR"},
-                                                           # {:name=>"Sushanth Bhaskarab", :location=>"Portland, OR"}]
-
   end
 
   def add_student_attributes(attributes_hash)
