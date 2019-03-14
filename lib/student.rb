@@ -4,7 +4,7 @@ class Student
 
   @@all = []
 
-  def initialize(student_hash)
+  def initialize(student_hash) #{:name=>"Alex Patriquin", :location=>"New York, NY"}
     binding.pry
   end
 
