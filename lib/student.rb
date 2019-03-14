@@ -21,7 +21,7 @@ class Student
 
     attributes_hash.each do |key,value|
       [key] = value
-    
+
     end
       binding.pry
                                                 #     {:twitter=>"someone@twitter.com",
