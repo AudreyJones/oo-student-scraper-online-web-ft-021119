@@ -10,7 +10,7 @@ class Student
     @@all << self
   end
 
-  def self.create_from_collection(students_array) 
+  def self.create_from_collection(students_array)
                                                           #[{:name=>"Alex Patriquin", :location=>"New York, NY"},
                                                            # {:name=>"Bacon McRib", :location=>"Kansas City, MO"},
                                                            # {:name=>"Alisha McWilliams", :location=>"San Francisco, CA"},
@@ -18,7 +18,7 @@ class Student
                                                            # {:name=>"Arielle Sullivan", :location=>"Chicago, IL"},
                                                            # {:name=>"Sushanth Bhaskarab", :location=>"Portland, OR"},
                                                            # {:name=>"Sushanth Bhaskarab", :location=>"Portland, OR"}]
-    
+
   end
 
   def add_student_attributes(attributes_hash)
