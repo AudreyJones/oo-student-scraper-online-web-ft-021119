@@ -14,7 +14,7 @@ class Student
     students_array.each do |name, location|
 binding.pry
     end
-    
+
                                                           #[{:name=>"Alex Patriquin", :location=>"New York, NY"},
                                                            # {:name=>"Bacon McRib", :location=>"Kansas City, MO"},
                                                            # {:name=>"Alisha McWilliams", :location=>"San Francisco, CA"},
