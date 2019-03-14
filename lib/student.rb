@@ -20,10 +20,11 @@ class Student
     new_student = Student.new(attributes_hash)
 
     attributes_hash.each do |key,value|
-      [key] = value
+      binding.pry
+      new_student[key] = value
 
     end
-      binding.pry
+      
                                                 #     {:twitter=>"someone@twitter.com",
                                                 #  :linkedin=>"someone@linkedin.com",
                                                 #  :github=>"someone@github.com",
